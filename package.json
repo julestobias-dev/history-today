@@ -2,10 +2,12 @@
   "name": "history-today",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://julestobias-dev.github.io/history-today",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -20,6 +22,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gh-pages": "^6.3.0",
     "sass": "^1.83.4",
     "sass-loader": "^16.0.4"
   },
