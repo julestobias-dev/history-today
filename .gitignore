@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-# /dist
+/dist
 _cacache
 _logs
 _update_notifier-last-checked
