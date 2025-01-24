@@ -1,0 +1,37 @@
+$breakpoints: (
+  "xs": 0,
+  "sm-phone": 320px,
+  "m-phone": 375px,
+  "lg-phone": 425px,
+  "tablet": 768px,
+);
+
+@mixin xs {
+  @media (max-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+
+@mixin sm-phone {
+  @media (max-width: map-get($breakpoints, "sm-phone")) and (min-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+
+@mixin m-phone {
+  @media (max-width: map-get($breakpoints, "m-phone")) and (min-width: map-get($breakpoints, "sm-phone")) {
+    @content;
+  }
+}
+
+@mixin lg-phone {
+  @media (max-width: map-get($breakpoints, "lg-phone")) and (min-width: map-get($breakpoints, "m-phone")) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: map-get($breakpoints, "tablet")) and (min-width: map-get($breakpoints, "lg-phone")) {
+    @content;
+  }
+}

@@ -1,0 +1,107 @@
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-image: url("https://res.cloudinary.com/dz1lbexlg/image/upload/v1737730144/background_eevqus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  .main-container {
+    // background-color: red;
+    width: 500px;
+    height: 800px;
+    margin: auto;
+    position: relative;
+    border: 10px solid white;
+    border-radius: 5px;
+
+    .bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      //   z-index: -1;
+    }
+
+    .details-container {
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .question-container {
+        background-color: rgba(255, 255, 255, 0.87);
+        padding: 10px 30px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+
+        .question {
+          //   color: white;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+
+      .event-container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 10px;
+
+        .year {
+          font-size: 25px;
+          font-weight: 700;
+        }
+
+        .event-details {
+          font-size: 20px;
+        }
+
+        .gif-icon {
+          width: auto;
+          height: 200px;
+        }
+      }
+
+      .btn-container {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+
+        .go-btn {
+          padding: 10px;
+          width: 100%;
+          cursor: pointer;
+          border-radius: 10px;
+          font-size: 25px;
+          box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+
+          &.is-loading {
+            cursor: none;
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}
